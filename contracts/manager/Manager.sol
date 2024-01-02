@@ -57,6 +57,11 @@ contract Manager is IManager, Actor, ManagerBase, ReentrancyGuard, SignatureVali
   PluginStatus[] public allPlugins;
   mapping(bytes4 => uint256) public timeLocks;
 
+  function version() public pure virtual override returns (uint256) {
+    // v1.0.1
+    return 1e6 + 1;
+  }
+
   function nameId() public virtual override returns (bytes4) {
     return bytes4(keccak256("Manager"));
   }

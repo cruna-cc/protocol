@@ -93,7 +93,7 @@ describe("Manager : Protectors", function () {
     const managerAddress = await vault.managerOf(tokenId);
     const manager = await ethers.getContractAt("Manager", managerAddress);
 
-    expect(await manager.version()).to.equal(1e6);
+    expect(await manager.version()).to.equal(1000001);
     expect(await manager.tokenId()).to.equal(tokenId);
     expect(await manager.tokenAddress()).to.equal(vault.address);
     expect(await manager.owner()).to.equal(bob.address);
@@ -352,7 +352,7 @@ describe("Manager : Protectors", function () {
     const managerV2Impl = await deployContract("ManagerV2Mock");
     const managerAddress = await vault.managerOf(tokenId);
     const manager = await ethers.getContractAt("Manager", managerAddress);
-    expect(await manager.version()).to.equal(1e6);
+    expect(await manager.version()).to.equal(1000001);
 
     let signature = (
       await signRequest(
