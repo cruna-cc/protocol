@@ -55,7 +55,11 @@ contract Manager is IManager, Actor, ManagerBase, ReentrancyGuard, SignatureVali
 
   mapping(bytes4 => Plugin) public pluginsById;
   PluginStatus[] public allPlugins;
+
+  // __gap => 49
   mapping(bytes4 => uint256) public timeLocks;
+
+  //
 
   function version() public pure virtual override returns (uint256) {
     // v1.0.1
@@ -411,5 +415,5 @@ contract Manager is IManager, Actor, ManagerBase, ReentrancyGuard, SignatureVali
   // variables without shifting down storage in the inheritance chain.
   // See https://docs.openzeppelin.com/contracts/4.x/upgradeable#storage_gaps
 
-  uint256[50] private __gap;
+  uint256[49] private __gap;
 }

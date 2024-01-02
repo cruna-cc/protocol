@@ -216,7 +216,7 @@ File                         |  % Stmts | % Branch |  % Funcs |  % Lines |Uncove
   Guardian.sol               |      100 |       50 |      100 |       70 |       22,33,38 |
   IManager.sol               |      100 |      100 |      100 |      100 |                |
   ManagedERC721.sol          |      100 |       58 |      100 |    95.65 |        170,182 |
-  Manager.sol                |    98.26 |    73.08 |      100 |    98.46 |        131,310 |
+  Manager.sol                |    98.26 |    73.08 |      100 |    98.46 |        135,314 |
   ManagerBase.sol            |       96 |    85.71 |      100 |      100 |                |
   ManagerProxy.sol           |      100 |      100 |      100 |      100 |                |
  plugins/                    |      100 |      100 |      100 |      100 |                |
